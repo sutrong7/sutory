@@ -1,0 +1,79 @@
+[
+  {
+    "type": "works",
+    "id": "vibey",
+    "name": "바이비 클론코딩",
+    "date": "2024년 2월",
+    "tag": ["클론코딩", "반응형", "애니메이션"]
+  },
+  {
+    "type": "works",
+    "id": "brooklyneditions",
+    "name": "Brooklyn Editions 클론코딩",
+    "date": "2024년 2월",
+    "tag": ["클론코딩", "반응형", "애니메이션"]
+  },
+  {
+    "type": "works",
+    "id": "clubclio",
+    "name": "Clio 모바일 클론코딩",
+    "date": "2024년 2월",
+    "tag": ["클론코딩", "모바일", "쇼핑몰"]
+  },
+  {
+    "type": "works",
+    "id": "torch",
+    "name": "Torch 클론코딩",
+    "date": "2024년 2월",
+    "tag": ["클론코딩", "적응형", "애니메이션"]
+  },
+  {
+    "type": "works",
+    "id": "seoulcityhall",
+    "name": "서울시청 클론코딩",
+    "date": "2024년 2월",
+    "tag": ["클론코딩", "적응형", "웹접근성"]
+  },
+  {
+    "type": "works",
+    "id": "naver",
+    "name": "네이버 클론코딩",
+    "date": "2024년 2월",
+    "tag": ["클론코딩", "적응형", "웹접근성"]
+  },
+  {
+    "type": "portfolio",
+    "id": "coniakcp",
+    "name": "Kcp 복지몰 제작",
+    "date": "2024년 2월",
+    "tag": ["모바일", "쇼핑몰"]
+  },
+  {
+    "type": "portfolio",
+    "id": "coniaworld",
+    "name": "Conia World 제작",
+    "date": "2024년 2월",
+    "tag": ["반응형","애니메이션"]
+  },
+  {
+    "type": "portfolio",
+    "id": "coniacareers",
+    "name": "Conia Career 제작",
+    "date": "2024년 2월",
+    "tag": ["반응형"]
+  },
+  {
+    "type": "portfolio",
+    "id": "commerceware",
+    "name": "Commerceware 디자인 및 제작",
+    "date": "2024년 2월",
+    "tag": ["반응형"]
+  },
+  {
+    "type": "portfolio",
+    "id": "homeandshopping",
+    "name": "Home&Shopping 입점 안내 디자인 및 제작",
+    "date": "2024년 2월",
+    "tag": ["적응형"]
+  }
+]

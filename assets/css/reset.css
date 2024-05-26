@@ -1,0 +1,41 @@
+*{margin:0;padding:0;font:inherit;color:inherit;}
+*, :after, :before {box-sizing:border-box;flex-shrink:0;}
+:root {
+  -webkit-tap-highlight-color:transparent;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+  cursor:default;
+  line-height:1.5;
+  overflow-wrap:break-word;
+  -moz-tab-size:4;
+  tab-size:4;
+}
+
+html, body {height:100%; }
+img, picture, video, canvas, svg {display: block;max-width:100%;}
+button {background:none;border:0;cursor:pointer;}
+a {text-decoration:none}
+table {border-collapse:collapse;border-spacing:0}
+fieldset{border:0;}
+ul{list-style:none;}
+
+input,button,select{
+    border:0;
+}
+
+select::-ms-expand{display:none;} /* IE 셀렉박스 기본 화살표 제거 */
+input[type=text]::-ms-clear{display: none} /* IE 인풋박스 clear 버튼 제거 */
+input::placeholder{color:#ababab};
+
+body,html{
+    font-weight: 400; font-family:'Pretendard','Noto Sans KR', 'Poppins', Malgun Gothic,'Malgun Gothic', sans-serif; background:#000;
+}
+*{font-family:'Pretendard','Noto Sans KR', 'Poppins', Malgun Gothic,'Malgun Gothic', sans-serif;}
+*, *::before, *::after {box-sizing: border-box; line-height: 175%; letter-spacing: normal;}
+table caption, legend, .blind {position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden;}
+
+span, b, strong {
+    letter-spacing: inherit;
+    line-height: inherit;
+    font-family: inherit;
+}
