@@ -244,7 +244,7 @@ $(document).ready(function () {
           if(index < 5){
           ihtml += `
             <div class="image-item">
-              <img src="../images/${item.id}.JPG" alt="${item.id}">
+              <img src="./assets/images/${item.id}.JPG" alt="${item.id}">
             </div>
           `
 
