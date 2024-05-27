@@ -244,7 +244,7 @@ $(document).ready(function () {
           if(index < 5){
           ihtml += `
             <div class="image-item">
-              <img src="./assets/images/${item.id}.JPG" alt="${item.id}">
+              <img src="../images/${item.id}.JPG" alt="${item.id}">
             </div>
           `
 
@@ -333,8 +333,7 @@ $(document).ready(function () {
     },
     error: function (jqXHR, textStatus, errorThrown) {
       console.error('Request Failed: ' + textStatus, errorThrown)
-    },
-  })
+    }, })
 
   function initializeSliders() {
     if (window.innerWidth <= 980) {
