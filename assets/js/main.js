@@ -194,7 +194,7 @@ $(document).ready(function () {
       const portfolioList = $('#portfolioList')
       const worksList = $('#worksList')
       const worksImgList = $('#worksImgList')
-    
+
       let phtml = ``
       let whtml = ``
       let thtml = ``
@@ -207,16 +207,16 @@ $(document).ready(function () {
       worksList.empty()
       worksImgList.empty()
 
-      $.each(data, function (index, item) {  
-
+      $.each(data, function (index, item) {
         if (item.type === 'portfolio') {
-        
           $.each(item.tag, function (index, tagItem) {
             thtml += `<li class="tag-item">#${tagItem}</li>`
-          })         
+          })
           phtml += `
             <div class="works-item">
-              <a href="https://sutrong7.github.io/${item.id}/" class="link-wrap">
+              <a href="https://sutrong7.github.io/${
+                item.id
+              }/" class="link-wrap">
                 <div class="number">
                   <p>${String(portfolioNum).padStart(2, '0')}</p>
                 </div>
@@ -241,16 +241,18 @@ $(document).ready(function () {
             thtml += `<li class="tag-item">#${tagItem}</li>`
           })
 
-          if(index < 5){
-          ihtml += `
+          if (index < 5) {
+            ihtml += `
             <div class="image-item">
               <img src="./assets/images/${item.id}.JPG" alt="${item.id}">
             </div>
           `
 
-          whtml += `
+            whtml += `
             <div class="works-item">
-              <a href="https://sutrong7.github.io/${item.id}/" class="link-wrap">
+              <a href="https://sutrong7.github.io/${
+                item.id
+              }/" class="link-wrap">
                 <div class="number">
                   <p>${String(worksNum).padStart(2, '0')}</p>
                 </div>
@@ -266,12 +268,10 @@ $(document).ready(function () {
               </a>
             </div>
           `
-          thtml = ``
-          worksNum++
+            thtml = ``
+            worksNum++
           }
         }
-  
-
       })
 
       portfolioList.append(phtml)
@@ -289,8 +289,8 @@ $(document).ready(function () {
           const worksAni = gsap.timeline({
             scrollTrigger: {
               trigger: '.sc-works .left',
-              start: '0 0',
-              end: '+=140%',
+              start: 'top top',
+              end: 'bottom 70%',
               scrub: 1,
               pin: true,
               toggleActions: 'play none none reset',
@@ -303,9 +303,9 @@ $(document).ready(function () {
             gsap.to(el, {
               scrollTrigger: {
                 trigger: el,
-                start: '0% 50%',
-                end: '100% 80%',
-                markers: true,
+                start: 'top 25%', // 항목이 뷰포트의 75% 지점에 도달할 때 시작
+                end: 'bottom 75%', // 항목이 뷰포트의 25% 지점에 도달할 때 끝
+                markers: false,
                 scrub: 5,
                 onEnter: () => {
                   worksListItems.removeClass('active')
@@ -333,7 +333,8 @@ $(document).ready(function () {
     },
     error: function (jqXHR, textStatus, errorThrown) {
       console.error('Request Failed: ' + textStatus, errorThrown)
-    }, })
+    },
+  })
 
   function initializeSliders() {
     if (window.innerWidth <= 980) {
