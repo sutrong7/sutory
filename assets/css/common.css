@@ -926,7 +926,7 @@ h5 {
 	position: fixed;
 	bottom: 22px;
 	right: 22px;
-	z-index: 10;
+	z-index: 100;
 }
 
 .fixed-btn .btn-write {
@@ -1056,7 +1056,7 @@ h5 {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	z-index: 100;
+	z-index: 105;
 	background: #333;
 	display: none;
 	border-radius: none;

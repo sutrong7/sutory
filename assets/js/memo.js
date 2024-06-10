@@ -30,17 +30,17 @@ closeBtns.forEach((button) => {
 })
 
 // 메모 패드 외부 클릭 시 닫기
-document.addEventListener('click', (event) => {
-  if (!memoPad.contains(event.target) && !openBtn.contains(event.target)) {
-    memoPad.style.display = 'none'
-  }
-})
+// document.addEventListener('click', (event) => {
+//   if (!memoPad.contains(event.target) && !openBtn.contains(event.target)) {
+//     memoPad.style.display = 'none'
+//   }
+// })
 
 // 메모 리스트 열기
 listBtn.addEventListener('click', () => {
   memoList.style.display = 'block'
-    memoPad.style.display = 'none'
-    document.body.style.overflow = 'hidden' // 스크롤 막기
+  memoPad.style.display = 'none'
+  document.body.style.overflow = 'hidden' // 스크롤 막기
 })
 
 // 메모 저장
@@ -71,6 +71,7 @@ memoBtn.addEventListener('click', () => {
   main.querySelector('.memo-title').value = ''
   main.querySelector('.memo-content').value = ''
   alert('저장 되었습니다')
+  memoPad.style.display = 'none'
 })
 
 // 메모 목록 업데이트
@@ -113,8 +114,6 @@ function setMemo() {
 
     memoItem.append(title, date, content, btnWrap)
     memoListElement.append(memoItem)
-
-    memoPad.style.display = 'none'
   }
 }
 
@@ -130,6 +129,7 @@ function setDeleteBtn(e) {
 function setEditBtn(e) {
   let memoId = e.target.closest('.memo-item').dataset.id
   let memo = memos.find((memo) => memo.id == memoId)
+  memoPad.style.display = 'block'
 
   if (memo) {
     main.querySelector('.memo-title').value = memo.title
@@ -137,7 +137,6 @@ function setEditBtn(e) {
     memos = memos.filter((memo) => memo.id != memoId)
     localStorage.setItem('memos', JSON.stringify(memos))
     setMemo()
-    memoPad.style.display = 'block'
   }
 }
 
