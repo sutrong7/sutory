@@ -129,14 +129,15 @@ function setDeleteBtn(e) {
 function setEditBtn(e) {
   let memoId = e.target.closest('.memo-item').dataset.id
   let memo = memos.find((memo) => memo.id == memoId)
-  memoPad.style.display = 'block'
+
 
   if (memo) {
     main.querySelector('.memo-title').value = memo.title
     main.querySelector('.memo-content').value = memo.content
     memos = memos.filter((memo) => memo.id != memoId)
     localStorage.setItem('memos', JSON.stringify(memos))
-    setMemo()
+      setMemo()
+        memoPad.style.display = 'block'
   }
 }
 
