@@ -595,269 +595,6 @@ h5 {
 	color: #fff;
 }
 
-.menuBtn_mClose {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: absolute;
-	top: 10px;
-	right: 25px;
-	width: 90px;
-	height: 90px;
-	padding: 0;
-	font-size: 0;
-	border: 0;
-	background: none;
-	outline: none;
-	cursor: pointer;
-}
-
-.menuBtn_mClose .btn_mClose {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 60px;
-	height: 60px;
-	transition: all .3s linear;
-	position: relative;
-	z-index: 4;
-}
-
-.menuBtn_mClose .btn_mClose:before {
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 50%;
-	background: var(--mainColor);
-	opacity: 0;
-	transition: all .3s linear;
-	transform: scale(0);
-}
-
-.menuBtn_mClose:hover .btn_mClose:before {
-	opacity: 1;
-	transform: scale(1);
-}
-
-.menuBtn_mClose .btn_mClose svg {
-	fill: var(--mainColor);
-	width: 30px;
-	height: 30px;
-	transition: all .3s linear;
-	position: relative;
-	z-index: 5;
-}
-
-.menuBtn_mClose:hover .btn_mClose svg {
-	fill: #000;
-}
-
-.fixed-btn {
-	position: fixed;
-	bottom: 22px;
-	right: 22px;
-	z-index: 10;
-}
-
-.fixed-btn .btn-write {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 70px;
-	height: 70px;
-	background: #444;
-	border-radius: 50%;
-	transition: all .5s;
-	opacity: 0;
-	visibility: hidden;
-	transition: all .5s;
-}
-
-.fixed-btn .btn-write.active{
-	opacity: 1;
-	visibility: visible;
-}
-
-.fixed-btn .btn-write:before {
-	content: '';
-	display: block;
-	width: 24px;
-	height: 24px;
-	filter: invert();
-	background: url(../images/ico-pencil.svg) center center/24px 24px no-repeat;
-}
-
-.fixed-btn .btn-write:hover {
-	background: var(--mainColor)
-}
-
-.fixed-btn .btn-write:hover:before {
-	filter: none;
-}
-
-.fixed-box {
-	position: fixed;
-	z-index: 110;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
-		0 1px 3px rgba(0, 0, 0, 0.08);
-	border-radius: 8px;
-	overflow: hidden;
-}
-
-.fixed-box.memo-pad {
-	right: 30px;
-	bottom: 30px;
-	display: none;
-}
-
-.memo-pad .memo-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	padding: 12px 20px;
-	background: #111;
-}
-
-.memo-pad .memo-header .header-title {
-	color: #fff;
-	font-size: 16px;
-}
-
-.btn-closeMemo {
-	width: 20px;
-	height: 20px;
-	background: url(../images/ico-close.svg) center center/20px 20px no-repeat;
-	filter: invert();
-}
-
-.memo-pad .memo-box {
-	padding: 20px;
-	background: #333;
-}
-
-.memo-pad .memo-box input {
-	width: 100%;
-	display: block;
-	margin-bottom: 16px;
-	padding: 10px 14px;
-	background: #222;
-	color: #fff;
-}
-
-.memo-pad .memo-box textarea {
-	width: 100%;
-	display: block;
-	padding: 10px 14px;
-	background: #222;
-	color: #fff;
-}
-
-.memo-pad .memo-box .btn-wrap {
-	display: flex;
-	margin-top: 16px;
-	justify-content: space-between;
-	gap: 16px;
-}
-
-.memo-pad .memo-box .btn-wrap button {
-	padding: 8px 14px;
-	text-align: center;
-	flex: 1;
-	color: #fff;
-	font-size: 14px;
-	background: #555;
-	border-radius: 4px;
-	/* transition: all .5s; */
-}
-
-.memo-pad .memo-box .btn-wrap .saveBtn {
-	background: #777;
-}
-
-/* .memo-pad .memo-box .btn-wrap button:hover{
-	background: #444;
-} */
-
-
-.fixed-box.memo-board {
-	/* margin: 10px;	 */
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 100;
-	background: #333;
-	display: none;
-	border-radius: none;
-}
-
-.memo-board .board-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	height: 50px;
-	padding: 12px 20px;
-	background: #222;
-	color: #fff;
-	font-size: 20px;
-}
-
-.memo-board .memo-list {
-	display: flex;
-	justify-content: flex-start;
-	gap: 20px;
-	flex-wrap: wrap;
-	padding: 30px;
-	height: calc(100vh - 50px);
-	overflow-y: scroll;
-	align-items: flex-start;
-}
-
-.memo-list .memo-item {
-	position: relative;
-	width: calc(100%/3 - 20px);
-	padding: 20px;
-	background-color: #FEE5AB;
-}
-
-.memo-list .memo-item .list-title {
-	color: #000;
-	font-weight: 600;
-	font-size: 22px;
-}
-
-
-.memo-list .memo-item .list-content {
-	margin: 10px 0 20px;
-}
-
-.memo-list .memo-item .btn-wrap {
-	text-align: right;
-}
-
-.memo-list .memo-item button {
-	display: inline-block;
-	background: none;
-	border: none;
-	padding: 8px 16px;
-	color: #222;
-	;
-	border: 1px solid #222;
-	border-radius: 6px;
-	font-size: 14px;
-	font-weight: 600;
-}
-
-.memo-list .memo-item button+button {
-	margin-left: 10px;
-}
-
 /*
     FOOTER
 */
@@ -1120,6 +857,281 @@ h5 {
 }
 
 
+/* 
+	MEMO
+*/
+
+.menuBtn_mClose {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 10px;
+	right: 25px;
+	width: 90px;
+	height: 90px;
+	padding: 0;
+	font-size: 0;
+	border: 0;
+	background: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.menuBtn_mClose .btn_mClose {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60px;
+	height: 60px;
+	transition: all .3s linear;
+	position: relative;
+	z-index: 4;
+}
+
+.menuBtn_mClose .btn_mClose:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background: var(--mainColor);
+	opacity: 0;
+	transition: all .3s linear;
+	transform: scale(0);
+}
+
+.menuBtn_mClose:hover .btn_mClose:before {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.menuBtn_mClose .btn_mClose svg {
+	fill: var(--mainColor);
+	width: 30px;
+	height: 30px;
+	transition: all .3s linear;
+	position: relative;
+	z-index: 5;
+}
+
+.menuBtn_mClose:hover .btn_mClose svg {
+	fill: #000;
+}
+
+.fixed-btn {
+	position: fixed;
+	bottom: 22px;
+	right: 22px;
+	z-index: 10;
+}
+
+.fixed-btn .btn-write {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 70px;
+	height: 70px;
+	background: #444;
+	border-radius: 50%;
+	transition: all .5s;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .5s;
+}
+
+.fixed-btn .btn-write.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.fixed-btn .btn-write:before {
+	content: '';
+	display: block;
+	width: 24px;
+	height: 24px;
+	filter: invert();
+	background: url(../images/ico-pencil.svg) center center/24px 24px no-repeat;
+}
+
+.fixed-btn .btn-write:hover {
+	background: var(--mainColor)
+}
+
+.fixed-btn .btn-write:hover:before {
+	filter: none;
+}
+
+.fixed-box {
+	position: fixed;
+	z-index: 110;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+		0 1px 3px rgba(0, 0, 0, 0.08);
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.fixed-box.memo-pad {
+	right: 30px;
+	bottom: 30px;
+	display: none;
+}
+
+.memo-pad .memo-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 12px 20px;
+	background: #111;
+}
+
+.memo-pad .memo-header .header-title {
+	color: #fff;
+	font-size: 16px;
+}
+
+.btn-closeMemo {
+	width: 20px;
+	height: 20px;
+	background: url(../images/ico-close.svg) center center/20px 20px no-repeat;
+	filter: invert();
+}
+
+.memo-pad .memo-box {
+	padding: 20px;
+	background: #333;
+}
+
+.memo-pad .memo-box input {
+	width: 100%;
+	display: block;
+	margin-bottom: 16px;
+	padding: 10px 14px;
+	background: #222;
+	color: #fff;
+}
+
+.memo-pad .memo-box textarea {
+	width: 100%;
+	display: block;
+	padding: 10px 14px;
+	background: #222;
+	color: #fff;
+}
+
+.memo-pad .memo-box .btn-wrap {
+	display: flex;
+	margin-top: 16px;
+	justify-content: space-between;
+	gap: 16px;
+}
+
+.memo-pad .memo-box .btn-wrap button {
+	padding: 8px 14px;
+	text-align: center;
+	flex: 1;
+	color: #fff;
+	font-size: 14px;
+	background: #555;
+	border-radius: 4px;
+	/* transition: all .5s; */
+}
+
+.memo-pad .memo-box .btn-wrap .saveBtn {
+	background: #777;
+}
+
+/* .memo-pad .memo-box .btn-wrap button:hover{
+	background: #444;
+} */
+
+
+.fixed-box.memo-board {
+	/* margin: 10px;	 */
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+	background: #333;
+	display: none;
+	border-radius: none;
+}
+
+.memo-board .board-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 50px;
+	padding: 12px 20px;
+	background: #222;
+	color: #fff;
+	font-size: 20px;
+}
+
+.memo-board .memo-list {
+	display: flex;
+	justify-content: flex-start;
+	gap: 20px;
+	flex-wrap: wrap;
+	padding: 30px;
+	min-height: calc(100vh - 50px);
+	height: calc(100vh - 50px);
+	overflow-y: auto;
+	align-items: flex-start;
+}
+
+.memo-list .memo-item {
+	position: relative;
+	width: calc(100%/3 - 20px);
+	padding: 20px;
+	background-color: #FEE5AB;
+}
+
+.memo-list .memo-item .list-title {
+	color: #000;
+	font-weight: 600;
+	font-size: 22px;
+}
+
+
+.memo-list .memo-item .list-content {
+	margin: 10px 0 20px;
+}
+
+
+.memo-list .memo-item span{
+	color: #777;
+}
+.memo-list .memo-item .btn-wrap {
+	text-align: right;
+}
+
+.memo-list .memo-item button {
+	display: inline-block;
+	background: none;
+	border: none;
+	padding: 8px 16px;
+	color: #222;
+	;
+	border: 1px solid #222;
+	border-radius: 6px;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.memo-list .memo-item button+button {
+	margin-left: 10px;
+}
+
+
+
+
 /*******************************************************************************
     @media 1530px
 *******************************************************************************/
@@ -1156,6 +1168,11 @@ h5 {
 
 	.footer .foot_works {
 		width: 30%;
+	}
+
+
+	.memo-list .memo-item {		
+		width: calc(100%/2 - 10px);		
 	}
 }
 
@@ -1297,7 +1314,6 @@ h5 {
 		/* padding: 40px 0 0;
 		margin: 40px 0 0; */
 	}
-
 }
 
 /*******************************************************************************
@@ -1483,6 +1499,11 @@ h5 {
 		font-size: 13px;
 	}
 
+
+	.memo-list .memo-item {		
+		width: 100%;		
+	}
+
 }
 
 
@@ -1593,24 +1614,6 @@ h5 {
 		height: 25px;
 	}
 
-
-	/* 검색 */
-	.pop {
-		height: 50px;
-		padding: 10px 15px;
-	}
-
-	.pop .btn_close {
-		width: 16px;
-		height: 16px;
-		top: -35px;
-	}
-
-	.pop .btn_search {
-		padding: 5px 0 0px 10px;
-	}
-
-
 	/* Footer */
 	.footer {
 		padding: 0;
@@ -1679,7 +1682,39 @@ h5 {
 	.footer .foot_bottom .privacy a {
 		font-size: 12px;
 	}
+	
+	.fixed-btn {
+		bottom: 10px;
+		right: 10px;
+	}
 
+	.fixed-btn .btn-write {
+		width: 56px;
+		height: 56px;
+	}
+
+	.fixed-btn .btn-write:before {		
+		width: 20px;
+		height: 20px;
+		background-size: 20px auto;;		
+	}
+
+	.memo-list .memo-item .list-title{
+		font-size: 18px;
+	}
+
+	.memo-list .memo-item .btn-wrap{
+		display: flex;
+		justify-content: space-between;
+	}
+	.memo-list .memo-item button{
+		font-size: 13px;
+		flex: 1;
+	}
+
+	.memo-list .memo-item button+button{
+		margin-left: 20px;
+	}
 }
 
 /*******************************************************************************
