@@ -1699,6 +1699,11 @@ h5 {
 		background-size: 20px auto;;		
 	}
 
+	.fixed-box.memo-pad{
+		left: 50%;
+		transform: trnaslateX(-50%);
+	}
+
 	.memo-list .memo-item .list-title{
 		font-size: 18px;
 	}
