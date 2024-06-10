@@ -17,6 +17,7 @@
     <script src="./assets/js/slick.min.js"></script>
     <script src="./assets/js/common.js" defer></script>
     <script src="./assets/js/header.js" defer></script>
+    <script src="./assets/js/memo.js" defer></script>
 </head>
 
 <body id="body" style="color: #fff">
@@ -295,6 +296,34 @@
             </div>
             <div class="track">
                 <a href="mailto:ssu4100@naver.com" class="link-email track_txt">&nbsp;ssu4100@naver.com</a>
+            </div>
+
+            <div class="fixed-btn">
+                <button class="btn-write" aria-label="메모장 열기 버튼"></button>
+            </div>
+
+            <div class="fixed-box memo-pad">
+                <div class="memo-header">
+                    <span class="header-title">제목없음.txt</span>
+                    <button class="btn-closeMemo"></button>
+                </div>
+                <div class="memo-box">
+                    <input type="text" name="" id="title" placeholder="제목을 적어주세요." class="memo-title" />
+                    <textarea name="" id="content" cols="30" rows="8" placeholder="메모를 적어주세요."
+                        class="memo-content"></textarea>
+                    <div class="btn-wrap">
+                        <button class="saveBtn">저장</button>
+                        <button class="listBtn">목록</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fixed-box memo-board">
+                <div class="board-header">
+                    <h5>MEMO</h5>
+                    <button class="btn-closeMemo"></button>
+                </div>
+                <div class="memo-list"></div>
             </div>
         </main>
         <footer class="footer">

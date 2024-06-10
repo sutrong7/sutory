@@ -4,13 +4,13 @@ $(function () {
    */
   $(document).ready(function() {
     const urlPath = window.location.pathname.split('/').filter(Boolean).pop();
-    console.log(urlPath)
+    // console.log(urlPath)
     const $navItems = $('.nav_item a');
 
     $navItems.each(function() {
         const $link = $(this);
       const href = $link.attr('href');
-      console.log(urlPath.toLowerCase())
+      // console.log(urlPath.toLowerCase())
         if (urlPath && urlPath.toLowerCase() === href.toLowerCase()) {
             $link.parent().addClass('on');
         }

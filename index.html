@@ -16,6 +16,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.0/lazysizes.min.js" async></script>
     <script src="./assets/js/odometer.js"></script>
     <script src="./assets/js/slick.min.js"></script>
 
@@ -24,6 +25,7 @@
     <script src="./assets/js/common.js" defer></script>
     <script src="./assets/js/header.js" defer></script>
     <script src="./assets/js/main.js" defer></script>
+    <script src="./assets/js/memo.js" defer></script>
     <!-- <script src="./assets/js/slide.js" defer></script> -->
 
 </head>
@@ -397,67 +399,6 @@
 
 
             </section>
-            <!-- <section class="sc-result com_pt">
-                <div class="deco">
-                    <img src="assets/images/content_bg.svg" alt="">
-                </div>
-                <div class="result_inner w1530">
-                    <h3 class="tit">
-                        <span>바이비의</span>
-                        <span>빛나는 순간을 숫자로</span>
-                        <span>확인해보세요.</span>
-                    </h3>
-
-                    <ul class="result_list">
-                        <li class="result_item one">
-                            <dl>
-                                <dd>
-                                    <h4 class="box_tit">누적 다운로드 수 <em>(2022년 기준)</em></h4>
-                                    <p><strong class="num odometer" id="odometer1" data-download=""></strong>건</p>
-                                </dd>
-                                <dt>
-                                    <img src="https://www.vibey.co.kr/img/icons02.svg" alt=""><span class="blind">누적
-                                        다운로드 수</span>
-                                </dt>
-                            </dl>
-                            <p class="txt">
-                                리뷰 기반 뷰티 커뮤니티, 라이브 커머스와 인플루언서 영상 리뷰까지 리뷰티는 베트남 뷰티 트렌드를 이끌어 가고 있습니다.
-                            </p>
-                        </li>
-                        <li class="result_item two">
-                            <dl>
-                                <dd>
-                                    <h4 class="box_tit">매출액 <em>(2021 → 2022년 기준)</em></h4>
-                                    <p><strong class="num odometer" id="odometer2"></strong>억원</p>
-                                </dd>
-                                <dt>
-                                    <img src="https://www.vibey.co.kr/img/icons01.svg" alt=""><span
-                                        class="blind">매출액</span>
-                                </dt>
-                            </dl>
-                            <p class="txt">
-                                바이비는 베트남에 진출하는 수많은 브랜드사와의 협력을 통해 폭발적으로 성장하고 있습니다.
-                            </p>
-                        </li>
-                        <li class="result_item three">
-                            <dl>
-                                <dd>
-                                    <h4 class="box_tit">제휴 브랜드 수 <em>(2023년 기준)</em></h4>
-                                    <p><strong class="num odometer" id="odometer3"></strong>개</p>
-                                </dd>
-                                <dt>
-                                    <img src="https://www.vibey.co.kr/img/icons03.svg" alt=""><span class="blind">제휴 브랜드
-                                        수</span>
-                                </dt>
-                            </dl>
-                            <p class="txt">
-                                우리는 결코 안주하지 않습니다. 바이비와 함께 베트남 시장에서 성장할 신규 브랜드사를 찾고 있습니다.
-                            </p>
-                        </li>
-                    </ul>
-
-                </div>
-            </section> -->
             <section class="sc-about com_p">
                 <div class="track track1">
                     <p class="track_txt">&nbsp;ABOUT&nbsp;ABOUT</p>
@@ -467,7 +408,8 @@
                         <img src="assets/images/img-profile.png" alt="프로필 사진">
                         <div class="btn-group">
                             <a class="btn-link" href="assets/download/강수경_이력서.pdf" download="강수경_이력서.pdf">RESUME</a>
-                            <a class="btn-link" href="assets/download/강수경_경력기술서.docx" download="강수경_경력기술서.docx">경력기술서</a>
+                            <a class="btn-link" href="assets/download/강수경_경력기술서.docx"
+                                download="강수경_경력기술서.docx">경력기술서</a>
                         </div>
                     </div>
                     <div class="txt_area right">
@@ -534,18 +476,6 @@
                                 </li>
                             </ul>
                         </div>
-                        <!-- <a href="#" class="eng btn-more">
-                            More About
-                            <span class="arrow">
-                                <svg width="41" height="18" viewBox="0 0 41 18" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M32.3749 17.5677L30.7696 15.9754L36.6196 10.1254H0.874939V7.87538H36.6196L30.7826 2.02538L32.3879 0.43306L40.9423 9.00038L32.3749 17.5677Z">
-                                    </path>
-                                </svg>
-                            </span>
-                        </a> -->
-
                     </div>
                 </div>
             </section>
@@ -617,6 +547,34 @@
                     </div>
                 </div>
             </section>
+
+            <div class="fixed-btn">
+                <button class="btn-write" aria-label="메모장 열기 버튼"></button>
+            </div>
+
+            <div class="fixed-box memo-pad">
+                <div class="memo-header">
+                    <span class="header-title">제목없음.txt</span>
+                    <button class="btn-closeMemo"></button>
+                </div>
+                <div class="memo-box">
+                    <input type="text" name="" id="title" placeholder="제목을 적어주세요." class="memo-title" />
+                    <textarea name="" id="content" cols="30" rows="8" placeholder="메모를 적어주세요."
+                        class="memo-content"></textarea>
+                    <div class="btn-wrap">
+                        <button class="saveBtn">저장</button>
+                        <button class="listBtn">목록</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fixed-box memo-board">
+                <div class="board-header">
+                    <h5>MEMO</h5>
+                    <button class="btn-closeMemo"></button>
+                </div>
+                <div class="memo-list"></div>
+            </div>
         </main>
         <footer class="footer">
             <div class="footer_inner">
@@ -664,7 +622,6 @@
                         </div>
                     </div>
                     <div class="foot_menu">
-                        <!-- <p class="foot_tit">바로가기</p> -->
                         <ul>
                             <li><a href="portfolio.html">Portfolio</a></li>
                             <li><a href="works.html">Works</a></li>
@@ -720,8 +677,6 @@
             repeat: -1
         });
     </script>
-
-
 </body>
 
 </html>

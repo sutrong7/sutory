@@ -52,6 +52,3 @@ $(document).ready(function () {
 
 /* Footer Work */
 
-$(document).ready(function () {
-  
-  })

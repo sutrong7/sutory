@@ -40,7 +40,7 @@
  */
 
 // 위치 정보 가져오기
-navigator.geolocation.getCurrentPosition(successCallback, errorCallback)
+// navigator.geolocation.getCurrentPosition(successCallback, errorCallback)
 
 // 위치 정보 가져오기 성공 시 실행되는 콜백 함수
 function successCallback(position) {
@@ -139,7 +139,7 @@ nameAniTl
     opacity: 1,
     xPercent: 0,
   })
-  .set('.v_title span', {
+  .set('.v_tit span', {
     color: '#fff',
   })
   .to('.v_tit .point', {
@@ -244,7 +244,7 @@ $(document).ready(function () {
           if (index < 5) {
             ihtml += `
             <div class="image-item">
-              <img src="./assets/images/${item.id}.JPG" alt="${item.id}">
+              <img src="./assets/images/${item.id}.JPG" alt="${item.id}" class="lazyload">
             </div>
           `
 
