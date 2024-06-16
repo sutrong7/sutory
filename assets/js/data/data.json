@@ -44,13 +44,15 @@
   {
     "type": "portfolio",
     "id": "coniakcp",
+    "detail" : "%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-KCP-%EB%B3%B5%EC%A7%80%EB%AA%B0-%EA%B5%AC%EC%B6%95",
     "name": "Kcp 복지몰 제작",
     "date": "2024년 2월",
-    "tag": ["모바일", "쇼핑몰"]
+    "tag": ["모바일", "쇼핑몰"]   
   },
   {
     "type": "portfolio",
     "id": "coniaworld",
+    "detail" : "%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-Conia-World-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%A0%9C%EC%9E%91",
     "name": "Conia World 제작",
     "date": "2024년 2월",
     "tag": ["반응형","애니메이션"]

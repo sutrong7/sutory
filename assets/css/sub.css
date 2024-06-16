@@ -549,7 +549,7 @@ h2 {
     }
 
     .gallery_list .gallery_item .util {
-        display: block;
+        z-index: 40;
     }
 
     .gallery_list .gallery_item .util .btn_wrap {
